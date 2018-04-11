@@ -42,6 +42,17 @@
 		"oT": 1,
 		"q": 100
 		},
+	"\/img\/jump.png": {
+		"ft": 32768,
+		"iS": 24211,
+		"oA": 0,
+		"oAP": "\/img\/jump.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"\/img\/sprite.png": {
 		"ft": 32768,
 		"iS": 123111,
