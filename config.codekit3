@@ -20,6 +20,28 @@
 		"opt": 1,
 		"q": 100
 		},
+	"\/img\/jump sprite 82  ( 410, 81).png": {
+		"ft": 32768,
+		"iS": 19856,
+		"oA": 0,
+		"oAP": "\/img\/jump sprite 82  ( 410, 81).png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/jump sprite.png": {
+		"ft": 32768,
+		"iS": 19856,
+		"oA": 0,
+		"oAP": "\/img\/jump sprite.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"\/img\/sprite.png": {
 		"ft": 32768,
 		"iS": 123111,
@@ -30,6 +52,13 @@
 		"opt": 1,
 		"oT": 1,
 		"q": 100
+		},
+	"\/img\/sprite.psd": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/img\/sprite.psd",
+		"oF": 0
 		},
 	"\/index.html": {
 		"cB": 0,

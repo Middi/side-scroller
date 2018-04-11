@@ -1,39 +1,44 @@
-var forward = true;
+function controls() {
 
-function right() {
-    if (keyCode === RIGHT_ARROW && forward) {
-            axel.sprX += 46;
-            bg.x -= 15;
+    // Walk Right
+    if (keyIsDown(RIGHT_ARROW) && axel.sprX < 225 && frameCount % 4 == 0) {
+        turned = false;
+        axel.sprX += 45;
+        bg.x -= 27;
     }
-    // else if (keyCode === RIGHT_ARROW  && !forward) {
-    //     if(axel.sprX > 0) {
-    //         axel.sprX -= 46;
-    //         bg.x -= 15;
-    //     }
-    //     else {
-    //         forward = true;
-    //     }
-    // }
+
+    else if (keyIsDown(RIGHT_ARROW) && axel.sprX >= 225 && frameCount % 4 == 0) {
+        turned = false;
+        axel.sprX = 0;
+        bg.x -= 27;
+    }
+
+
+    // Walk Left
+    if (bg.x <= -27) {
+        if (keyIsDown(LEFT_ARROW) && axel.sprX < 225 && frameCount % 4 == 0) {
+            turned = true;
+            axel.sprX += 45;
+            bg.x += 27;
+        }
+
+        else if (keyIsDown(LEFT_ARROW) && axel.sprX >= 225 && frameCount % 4 == 0) {
+            turned = true;
+            axel.sprX = 0;
+            bg.x += 27;
+        }
+    }
+
+    // Jump
+    if (keyIsDown(' ') && frameCount % 4 == 0) {
+        axel.sprX += 45;
+        bg.x += 27;
+    }
 }
 
-function left() {
-    if (keyCode === LEFT_ARROW && forward) {
-        if(axel.sprX < 181) {
-            axel.sprX += 46;
-            bg.x += 15;
-        }
-        else {
-            forward = false;
-        }
+function turn() {
+    if (turned){
+        translate(width,0);
+        scale(-1.0,1.0); 
     }
-    else if (keyCode === LEFT_ARROW  && !forward) {
-        if(axel.sprX > 0) {
-            axel.sprX -= 46;
-            bg.x += 15;
-        }
-        else {
-            forward = true;
-        }
-    }
-    
 }
