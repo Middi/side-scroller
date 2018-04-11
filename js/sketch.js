@@ -8,11 +8,13 @@ var axel = {
     y: 540,
     sprX: 0,
     sprY: 0,
-    jumping: false,
-    velX: 0,
-    velY: 0
+    wid: 162,
+    hei: 291.6,
+    sWid: 45,
+    sHei: 81
 };
 
+var jumpImg;
 var turned = false;
 var jumping = false;
 var jumpCount = 0;
@@ -21,6 +23,7 @@ var jumpCount = 0;
 function preload() {
     bg.img = loadImage('../img/back.jpg');
     axel.img = loadImage('../img/sprite.png');
+    jumpImg = loadImage('../img/jump.png');
 }
 
 function setup() {
@@ -36,7 +39,7 @@ function draw() {
     textSize(40);
     text(axel.y, 100, 130);
     turn();
-    image(axel.img, axel.x, axel.y, 162, 291.6, axel.sprX, axel.sprY, 45, 81);
+    image(axel.img, axel.x, axel.y, axel.wid, axel.hei, axel.sprX, axel.sprY, axel.sWid, axel.sHei);
     if(jumping) {
         jump();
     }

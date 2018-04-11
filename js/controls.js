@@ -43,5 +43,5 @@ function jump() {
     }
     
     axel.y = 0.981*sq(jumpCount)/2 - 28*jumpCount + 540;
-    jumpCount++; 
+    jumpCount++;
 }
